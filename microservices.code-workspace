@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "limit-service"
+		},
+		{
+			"path": "spring-cloud-config-server"
+		},
+		{
+			"path": "git-localconfig-repo"
+		}
+	],
+	"settings": {}
+}

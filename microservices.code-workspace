@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "git-localconfig-repo"
+		},
+		{
+			"path": "currency-exchange-service"
 		}
 	],
 	"settings": {}

@@ -11,7 +11,12 @@
 		},
 		{
 			"path": "currency-exchange-service"
+		},
+		{
+			"path": "currency-conversion-service"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
 }

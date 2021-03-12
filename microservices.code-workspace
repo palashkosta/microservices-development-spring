@@ -17,6 +17,12 @@
 		},
 		{
 			"path": "naming-server"
+		},
+		{
+			"path": "api-gateway"
+		},
+		{
+			"path": "docs"
 		}
 	],
 	"settings": {

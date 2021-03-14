@@ -25,10 +25,21 @@ public class ApiGatewayConfiguration {
         Function<PredicateSpec, Buildable<Route>> currencyExchangeFunction
             = p -> p.path("/currency-exchange/**")
                     .uri("lb://currency-exchange-service/");
+        Function<PredicateSpec, Buildable<Route>> currencyConversionFunction
+            = p -> p.path("/currency-conversion/**")
+                    .uri("lb://currency-conversion/");
+        Function<PredicateSpec, Buildable<Route>> rewriteRoutePathFunction 
+            = p -> p.path("/currency-conversion-new/**")
+                    .filters(f -> f.rewritePath(
+                                    "/currency-conversion-new/(?<segment>.*", 
+                                    "/currency-conversion/${segment}"))
+                    .uri("lb://currency-conversion");
         return builder
                 .routes()
                 .route(routeFunction)
                 .route(currencyExchangeFunction)
+                .route(currencyConversionFunction)
+                .route(rewriteRoutePathFunction)
                 .build();
     }
 
